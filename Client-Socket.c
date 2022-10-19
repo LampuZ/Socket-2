@@ -29,10 +29,11 @@
 #define SOCKET_ERROR ((int)-1) // error code conversion
 #define END_RECV 47 // ASCII value for escape character (/ BUTTON)
 #define RETURN_CHAR 10
-#define INPUT_STRING_LENGTH 50
-
 
 #define MAX_PROMPT_LENGTH 200
+
+/**#define INPUT_STRING_LENGTH 50**/
+
 
 /**
  * @brief simulates the prompt of a telnet client using sockets as
@@ -44,7 +45,7 @@
 void telnetClient(int in, int out)
 {
     // input string:
-    char * prompt = malloc(INPUT_STRING_LENGTH);
+    char * prompt = malloc(MAX_PROMPT_LENGTH);
     char prompted, recvChar;
     int len, asciiVal;
 
@@ -74,7 +75,7 @@ void telnetClient(int in, int out)
     } while (recvChar != END_RECV); // if arrives / close the connection
 
     // ** free the malloc'd variables
-    free(...);
+    free(prompt);
 }
 
 
@@ -135,7 +136,8 @@ int main(int argc, char *argv[]) {
 
     /* socket::close */
     printf("\nsocket::close\n");
-    close(...);
+    close(socketClient);
+    close(socketServer);
 
     return (0);
 }
