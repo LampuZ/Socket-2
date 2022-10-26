@@ -27,4 +27,4 @@ _ _ _
 
 # *1) Definizione del problema*
 
-### L'obiettivo dell'esercitazione è l'implementazione di un prompt interattivo che simuli il Client Telnet. Oltre alla creazione del file **Client.echo.c**, verrà utilizzato "Server.echo.c", creato precedentemente per simulare il lato server.
+### L'obiettivo dell'esercitazione è l'implementazione di un prompt interattivo che simuli il Client Telnet. Oltre alla creazione del file *Client.echo.c*, verrà utilizzato "Server.echo.c", creato precedentemente per simulare il lato server.
