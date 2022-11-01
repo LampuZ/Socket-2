@@ -26,7 +26,7 @@
 #define PORT 1234 // server port
 #define SOCKET_ERROR ((int)-1) // error code conversion
 #define END_RECV 27 // ASCII value for escape character (/ BUTTON)
-#define RETURN_CHAR 10
+#define RETURN_CHAR 1
 #define RETURN ((int)13) 
 #define MAX_PROMPT_LENGTH 200
 
