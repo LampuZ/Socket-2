@@ -25,7 +25,7 @@
 
 #define PORT 5001 // server port
 #define SOCKET_ERROR ((int)-1) // error code conversion
-#define END_RECV 27 // ASCII value for escape character (/ BUTTON)
+#define END_RECV 27 // ASCII value for escape character (esc)
 #define RETURN_CHAR 10
 #define RETURN 13 
 #define MAX_PROMPT_LENGTH 200 
@@ -136,7 +136,7 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    send( socketServer , "Hello! Echo server here.\n", 26, 0);
+    send( socketServer , "Hello User!! \n", 26, 0);
 
     /** do some printing in order to notify the user */
     /** error management: notify the user if something goes horribly wrong */
