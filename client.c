@@ -1,6 +1,6 @@
 /**
  * @file client.echo.c
- * @author gabriele chiusano
+ * @author Conedera, Lampugnano
  * @brief 
  * @version 0.1
  * @date 2020-12-02
