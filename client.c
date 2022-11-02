@@ -1,6 +1,6 @@
 /**
  * @file client.echo.c
- * @author Conedera, Lampugnano
+ * @author Conedera Jarno, Lampugnano Matteo
  * @brief 
  * @version 0.1
  * @date 2022-11-02
