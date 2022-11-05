@@ -62,8 +62,8 @@ void telnetClient(int in,int out) //inizializzazione funzione telnet
             // ** wait for the answer from the server
             read(in, &recvChar,1);
            
-           printf("\n%c",recvChar);  //stampa il carattere ricevuto
-           fflush(stdout);      
+            printf("\n%c",recvChar);  //stampa il carattere ricevuto
+            fflush(stdout);      
         }
         }
 
