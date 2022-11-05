@@ -76,7 +76,7 @@ int main(unsigned argc, char **argv) //inizializzazione del main
     }
 
     /** after handshaking, send back to client the greetings message, just for testing purposes */
-    send(commSocket, "", 0, 0);
+    send(commSocket, "Hello!!!", 0, 0);
 
     /** do/while cycle that keeps the communication up */
     do {
