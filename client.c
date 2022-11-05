@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #include <errno.h>
 #include <unistd.h>
@@ -56,17 +57,19 @@ void telnetClient(int in,int out) //inizializzazione funzione telnet
         {
             // ** from prompt
             char prompted = prompt[i] ;
-            if(prompted!= RETURN_CHAR && prompted!=RETURN){
+            if(prompted!= RETURN_CHAR && prompted!=RETURN)
+            {
             // ** write to server something
             write(in, &prompted,1);
             // ** wait for the answer from the server
             read(in, &recvChar,1);
-           
-            printf("\n%c",recvChar);  //stampa il carattere ricevuto
+    
+           if(isprint(recvChar))
+            printf("\nEcho:%c",recvChar);  //stampa il carattere ricevuto
             fflush(stdout);      
         }
         }
-
+        
     } while (recvChar != END_RECV); // if arrives / close the connection
 
     // ** free the malloc'd variables
@@ -142,8 +145,11 @@ int main(int argc, char *argv[]) { //inizializzazione funzione main
         printf("\nErrore durante la connect\n"); //errore
         exit(EXIT_FAILURE);
     }
-
+    char buffer[10];
+    read(socketClient, buffer, sizeof(buffer));
+    printf("Welcome msg: %s", buffer);
     
+        
 
     /** do some printing in order to notify the user */
     /** error management: notify the user if something goes horribly wrong */
