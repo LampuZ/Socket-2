@@ -76,20 +76,23 @@ do
 ### Con il printf, stampa il carattere ricevuto.
 
 ```c
-for (int i = 0; i < (strlen(prompt)+1) ; i++) //ciclo while
+ for (int i = 0; i < (strlen(prompt)+1) ; i++) //ciclo while
         {
             // ** from prompt
             char prompted = prompt[i] ;
-            if(prompted!= RETURN_CHAR && prompted!=RETURN){
+            if(prompted!= RETURN_CHAR && prompted!=RETURN)
+            {
             // ** write to server something
             write(in, &prompted,1);
             // ** wait for the answer from the server
             read(in, &recvChar,1);
-           
-           printf("\n%c",recvChar);  //stampa il carattere ricevuto
-           fflush(stdout);      
+    
+           if(isprint(recvChar))
+            printf("\nEcho:%c",recvChar);  //stampa il carattere ricevuto
+            fflush(stdout);      
         }
-        }
+        }  
+       
 ```
 ### 5) Inizializzazione funzione main.
 ```c
@@ -136,12 +139,15 @@ int main(int argc, char *argv[]) { //inizializzazione funzione main
     serverConf.sin_port = htons(serverPort );
 ```
 ### 8) Determina qualora il Client si possa connettere al Server. In caso non fosse possibile, viene stampato un errore
-  ```c
+```c
   if ((socketServer = connect( socketClient,(struct sockaddr *)&serverConf, sizeof(serverConf))) == SOCKET_ERROR) {  //permette la connessione di client al socket
         
         printf("\nErrore durante la connect\n"); //errore
         exit(EXIT_FAILURE);
     }
+    char buffer[10];
+    read(socketClient, buffer, sizeof(buffer));
+    printf("Welcome msg: %s", buffer);
 ```
 ### 9) Chiusura dei sockets, Client e Server, con stampa di messaggio che comunica testuali azioni.
 ```c
