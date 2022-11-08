@@ -189,7 +189,7 @@ runclient:
 ```
 ### Dopo aver completato l'esecuzione del codice, per uscire dal terminale è necessario premere il tasto "Escape" 
 <br/><br/>
-![](Output.png)
+![](Terminali.png)
 ### Una raffigurazione del terminale
 <br/><br/>
 
