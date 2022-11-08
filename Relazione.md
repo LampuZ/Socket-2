@@ -68,7 +68,7 @@ void telnetClient(int in,int out) //inizializzazione funzione telnet
 ```c
 do 
     {
-        printf("Send msg: ^[ to end transmission\n"); //stampa messaggio per chiusura della transmissione
+        printf("\nSend msg: ^[ to end transmission\n"); //stampa messaggio per chiusura della transmissione
         fgets(prompt,MAX_PROMPT_LENGTH,stdin); //riceve dati in input (sostituito alla scanf)
 ```		
 ### 4) Ciclo for che serve per prendere in input da terminale, scrivendo al server.
@@ -151,7 +151,7 @@ int main(int argc, char *argv[]) { //inizializzazione funzione main
 ```
 ### 9) Chiusura dei sockets, Client e Server, con stampa di messaggio che comunica testuali azioni.
 ```c
- printf("\n1Socket:close \n"); //messaggio che comunica la chiusura del socket
+ printf("\nSocket:close \n"); //messaggio che comunica la chiusura del socket
     fflush(stdout);
     close(socketClient);    //chiude socketClient
     close(socketServer);    //chiude socketServer
