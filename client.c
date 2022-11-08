@@ -48,7 +48,7 @@ void telnetClient(int in,int out) //inizializzazione funzione telnet
     // infinite loop used to simulate interactive prompting
     do 
     {
-        printf("Send msg: ^[ to end transmission\n"); //stampa messaggio per chiusura della transmissione
+        printf("\nSend msg: ^[ to end transmission\n"); //stampa messaggio per chiusura della transmissione
         fgets(prompt,MAX_PROMPT_LENGTH,stdin); //riceve dati in input (sostituito alla scanf)
         // ** loop over the 
        
@@ -159,7 +159,7 @@ int main(int argc, char *argv[]) { //inizializzazione funzione main
     
 
     /* socket::close */
-    printf("\n1Socket:close \n"); //messaggio che comunica la chiusura del socket
+    printf("\nSocket:close \n"); //messaggio che comunica la chiusura del socket
     fflush(stdout);
     close(socketClient);    //chiude socketClient
     close(socketServer);    //chiude socketServer
