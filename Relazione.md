@@ -165,7 +165,7 @@ int main(int argc, char *argv[]) { //inizializzazione funzione main
 # *3) Testing*
 
 ### Per la corretta esecuzione del codice,sarà necessaria, per prima cosa, aprire un terminale diviso.
-### Il primo file che deve essere compilato ed avviato è il server, così che sia possibile per il client, connettersi.
+### Il primo file che deve essere compilato ed avviato è il server, così che sia possibile per il client connettersi.
 ### Dopodichè sara necessario fare lo stesso con il client. 
 ### Per questi procedimenti è stato realizzato un makefile.
 
@@ -197,7 +197,6 @@ runclient:
 ### Nel codice di partenza sono stati notati alcuni errori, prevalentemente nel ciclo.
 ### Una funzione che non permetteva la corretta esecuzione del codice.
 ### Sostituzione di una scanf con un fgets, per ottimizzare l'utilizzo di stringhe.
-### C'è stata anche la necessità di rivedere alcune cose nel server creato precedentemente.
 ### É stato necessario provvedere all'utilizzo di stringhe con la funzione "strlen", determinandone la dimensione.
 ### Sono stati cambiati gli attributi di "write" e "read".
 ### Implementare la corretta chiusura dei socket ha richiesto più tempo del previsto.
